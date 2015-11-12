@@ -1,11 +1,19 @@
 
 <!DOCTYPE html>
-./_includes/JB/pages_list
+
 <html lang="en">
 
 <head>
 
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
+
+
+
+    
+    
+
+
+
+  <!--  -->
 
   <title>M&W lab.</title>
 
@@ -19,7 +27,8 @@
 
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
 
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
@@ -65,11 +74,11 @@
 
   .jumbotron {
 
-    background:url(img/DSC_0005.jpg);
+    background:url(img/DSC_0005.jpg) ;;
     background-repeat: no-repeat;;
 
       color: #fff;
-
+    display:none;
       padding: 300px 50px;
 
       font-family: Montserrat, sans-serif;
@@ -334,7 +343,7 @@
 
 <nav class="navbar navbar-default navbar-fixed-top">
 
-  <div class="container">
+  <div id ="fadein" class="container">
 
     <div class="navbar-header">
 
@@ -372,7 +381,7 @@
 
 
 
-<div class="jumbotron text-center">
+<div id="title" class="jumbotron text-center">
 
   <h1>M & W LAB<h1> 
 
@@ -422,7 +431,7 @@
 
     </div>
 
-    <div class="col-sm-8">
+    <div id = mame class="col-sm-8">
 
       <h2>成員介紹</h2><br>
 
@@ -685,9 +694,9 @@ var mapProp = {
 
   zoom:15,
 
-  scrollwheel:true,
+  scrollwheel:false,
 
-  draggable:true,
+  draggable:false,
 
   mapTypeId:google.maps.MapTypeId.ROADMAP
 
@@ -740,11 +749,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 <script>
 
+
 $(document).ready(function(){
 
-  // Add smooth scrolling to all links in navbar + footer link
+ $(".jumbotron").fadeIn(3000);
+// $(".jumbotron").animate({background : url('img/DSC_0005.jpg') }, 600);
+//alert("Hello! I am an alert box!!");
 
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+ $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
 
 
@@ -779,11 +792,18 @@ $(document).ready(function(){
     });
 
   });
+ //$("#myPage").fadeIn("slow");
+
+
+
+
+  // Add smooth scrolling to all links in navbar + footer link
+
+  
 
 })
-function myFunc() {
-    href="http://www.w3schools.com/html/"
-}
+
+
 </script>
 
 
