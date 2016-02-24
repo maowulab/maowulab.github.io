@@ -40,7 +40,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1129836003706990'
+    appId      : '{your-app-id}',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -76,9 +76,6 @@
 
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
-  
-  
-  
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
@@ -99,25 +96,7 @@
 </fb:login-button>
 
 <div id="status">
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-  
-  
-  asdad
 </div>
-
-
-</div>
-
-
-
-
-
-
-
 
 </body>
 </html>
