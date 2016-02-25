@@ -12,8 +12,53 @@
 
 <script>
 
-  
 
+  	function Login()
+	{
+	
+		FB.login(function(response) {
+		   if (response.authResponse) 
+		   {
+		    	getUserInfo();
+  			} else 
+  			{
+  	    	 console.log('User cancelled login or did not fully authorize.');
+   			}
+		 },{scope: 'email,user_photos,user_videos'});
+	
+	
+	}
+
+  function getUserInfo() {
+	    FB.api('/me', function(response) {
+
+	  var str="<b>Name</b> : "+response.name+"<br>";
+	  	  str +="<b>Link: </b>"+response.link+"<br>";
+	  	  str +="<b>Username:</b> "+response.username+"<br>";
+	  	  str +="<b>id: </b>"+response.id+"<br>";
+	  	  str +="<b>Email:</b> "+response.email+"<br>";
+	  	  str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
+	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
+	  	  document.getElementById("status").innerHTML=str;
+	  	  	    
+    });
+    }
+	function getPhoto()
+	{
+	  FB.api('/me/picture?type=normal', function(response) {
+
+		  var str="<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
+	  	  document.getElementById("status").innerHTML+=str;
+	  	  	    
+    });
+	
+	}
+	function Logout()
+	{
+		FB.logout(function(){document.location.reload();});
+	}
+
+  //`-----------
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -24,7 +69,7 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
        //連線成功之狀態
-       
+        getUserInfo();
        $('#login').hide();
        
        
@@ -41,6 +86,8 @@
         'into Facebook.';
     }
   }
+
+   
 
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
