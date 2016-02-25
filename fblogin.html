@@ -32,7 +32,7 @@
   function getUserInfo() {
 	    FB.api('/me', function(response) {
 
-	  var str="<b>Name</b> : "+response.name+"<br>";
+	/*  var str="<b>Name</b> : "+response.name+"<br>";
 	  	  str +="<b>Link: </b>"+response.link+"<br>";
 	  	  str +="<b>Username:</b> "+response.username+"<br>";
 	  	  str +="<b>id: </b>"+response.id+"<br>";
@@ -41,6 +41,12 @@
 	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	  document.getElementById("status").innerHTML=str;
 	  	  	    
+   */    // 以上為跑出id相關資訊
+   
+   
+   
+   getPhoto();
+   
     });
     }
 	function getPhoto()
