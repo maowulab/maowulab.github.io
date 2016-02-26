@@ -296,8 +296,8 @@ margin-top:10px;
     <div id="sidebar"><br></br>
     
     
-     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">  
-</fb:login-button>  
+     <fb:login-button  id = "login "   scope="public_profile,email" onlogin="checkLoginState();">  
+     </fb:login-button>  
 
 <div id="status">  
 </div>  
@@ -408,7 +408,7 @@ function myFunction() {
 	  	 
 	  	    */ 
 	  	 
-	  	// var  str ="<input type='button' value='Logout' onclick='Logout();'/>";
+	  	var  str ="<input type='button' value='Logout' onclick='Logout();'/>";
 	  	 
 	  	// document.getElementById("status").innerHTML=str;
 	  	  	    
@@ -450,6 +450,9 @@ function myFunction() {
     if (response.status === 'connected') {
        //連線成功之狀態
         getUserInfo();
+        
+        
+        
       $('#login').hide();
        
        
@@ -533,6 +536,9 @@ function myFunction() {
 FB.login(function(response){
   // Handle the response object, like in statusChangeCallback() in our demo
   // code.
+
+ $('#login').hide();
+
 });
    
    
