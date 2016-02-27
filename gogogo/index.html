@@ -524,18 +524,18 @@ function myFunction() {
 	    FB.api('/me', function(response) {
 
 	 var  name ="<b>Name</b> : "+response.name+"<br>";
-	  	  link ="<b>Link: </b>"+response.link+"<br>";
-	  	  username +="<b>Username:</b> "+response.username+"<br>";
-	  	  id ="<b>id: </b>"+response.id+"<br>";
-	  	  mail ="<b>Email:</b> "+response.email+"<br>";
-	  	  photo ="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
+	 var 	  link ="<b>Link: </b>"+response.link+"<br>";
+	 var	  username +="<b>Username:</b> "+response.username+"<br>";
+     var  id ="<b>id: </b>"+response.id+"<br>";
+    var mail ="<b>Email:</b> "+response.email+"<br>";
+ 	 var photo ="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
 	  	 
 	  	 
 	  	 
 	  	  getPhoto();  // 照片會跑出來
 	  	    
 	  	 
-	  	var  str ="<br></br><input type='button' value='Logout' onclick='Logout();'/><br></br><p>Welcome"+response.username+" <p>";
+	 // 	var  str ="<br></br><input type='button' value='Logout' onclick='Logout();'/><br></br><p>Welcome"+response.username+" <p>";
 	  	 
 	  	 
 	  	 
@@ -550,16 +550,13 @@ function myFunction() {
 	function getPhoto()
 	{
 	  FB.api('/me/picture?type=normal', function(response) {
-
 		  var str2=" <img src='"+response.data.url+"'/> ";
-		  
-		  
-		  
 	  	  document.getElementById("status").innerHTML+=str2;
 	  	  	    
     });
 	
 	}
+	
 	function Logout()
 	{
 		FB.logout(function(){document.location.reload();});
