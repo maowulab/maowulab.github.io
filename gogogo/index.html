@@ -19,8 +19,86 @@
 
   <style>
   /* 以上兩個為作為loading用套件 */
-  body { background:#dddddd !important; } 
+  
+  
+  
+  #footerdown{
+  width: 100%;
 
+height: 250px;/*腳部的高度*/
+
+background:#80bfff;  
+  
+  }
+  
+  
+  #final{     /*  底下文字*/
+  margin-top:15px; 
+
+   text-align: center;
+  
+  
+  
+  
+  }
+  
+  
+  
+  
+  #footer {
+position: relative;
+
+width: 100%;
+
+height: 200px;/*腳部的高度*/
+
+clear:both;
+
+
+}
+
+
+#copyright{
+
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #000000;
+	font-size: 15;
+	padding: 5;
+	text-shadow: 4px 0px 2px #A1A1A1;
+	 text-align: center;
+
+}
+
+  
+  .startbutton {
+    background-color: #ff66a3; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    margin: 5px;
+     margin-left: auto ;
+  margin-right: auto ;
+}   
+
+/* 開始測驗之按鈕的底 */
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+/* 開始測驗hover*/
+  
+  
+  body { background:#dddddd !important; } 
+/* 洗掉bootstrap之底*/
 
 
   .button {
@@ -37,7 +115,7 @@
     transition-duration: 0.4s;
     cursor: pointer;
 }
-
+/* 開始測驗之按鈕的底 */
  
  .button1 {
     background-color: white; 
@@ -137,6 +215,11 @@ margin-top:5px;
     
 }
 
+#question{
+ margin-left:20px;
+margin-right:20px;
+}
+
 
 img.displayed {
 margin-top:10px; 
@@ -156,13 +239,18 @@ margin-top:10px;
 		 padding:100px 40px 100px 40px; 
 		  }
   
+#startbutton{
+    text-align: center;
 
+    
+
+}
  
  
   .navbar {
  	 position:absolute;
       margin-bottom: 0;
-      background-color: #f4511e;
+      background-color: #6666ff;
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
@@ -217,11 +305,7 @@ margin-top:10px;
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#pricing">PRICING</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        
       </ul>
     </div>
   </div>
@@ -241,36 +325,37 @@ margin-top:10px;
 
 
     <div id="header">
-        
-     
-
-
-
-         </div>
+	<!-- 放header 廣告 -->        
+    </div>
     
     <div id="content">
-    
+    <!-- 左邊內容-->
      	
      	
      	<div id="start">
-     	
-				<div class="loading1"></div>
-
-		<div id="upimage ">
-
-		</div>
-     	
+    	<!-- 開始標籤javascript--> 	
+				
  	   <img class="displayed" src="games/egg.jpg" alt="Smiley face" height="360" width="660">
-        	 <h1>你喜歡吃哪一種蛋呢</h1>
-			<h4>炒蛋火腿蛋水煮蛋玉子燒，蛋的料理很多種，挑挑看你喜歡吃哪一種蛋就可以知道你載大家面前算是哪一種朋友</h4>
-				<div id="start2"><button  class="button button3"  style="font-size : 20px;width:500px;height:80px" >開始測驗</button>
-				</div>
+ 	   		<div id = "question">
+        		<h1>你喜歡吃哪一種蛋呢</h1>
+			 	<h4>炒蛋火腿蛋水煮蛋玉子燒，蛋的料理很多種，挑挑看你喜歡吃哪一種蛋就可以知道你載大家面前算是哪一種朋友</h4>
+		<!--	<div id="start2"><button  class="button button3"  style="font-size : 20px;width:500px;height:80px" >開始測驗</button></div> -->
+			</div>
+		    
+		    
+		    <div id = "startbutton">
+		    	<br></br>
+				<button  id="start2" class="startbutton button2 "   style="font-size : 20px;width:560px;height:50px"   >開始測驗</button>
+			    <br></br><br></br><br></br><br></br><br></br>
+			
+			</div>	
 		</div>
  
  
  
  
  		 <div id="phase2">
+ 		 	<br></br><br></br>
  			<h1 >你喜歡吃哪一種蛋呢?</h1>
  			<button id = "1" class="button button1"  style="font-size : 20px;width:500px;height:60px"  >水煮蛋</button>
  			<button id = "2" class="button button1"  style="font-size : 20px;width:500px;height:60px" >溏心蛋</button>
@@ -280,27 +365,35 @@ margin-top:10px;
  		 </div>
  
  
-  <div id="phase3">
- 			
- 			
- 			
- 			 <img class="displayed" src="pcman.gif" alt="Smiley face" height="60" width="60"> <h4>資料分析中，請稍候......</h4>
- 			
- 			 
- 			 
+ 		 <div id="phase3">
+ 			<img class="displayed" src="pcman.gif" alt="Smiley face" height="60" width="60"  > <h4>資料分析中，請稍候......</h4>
  		 </div>
  
+ 		<div id="phase4">
+ 			
+ 			<p>測量結果</p>
+ 		</div>
+ 
+ 
+ 
+ 
+ 
+ 
     </div>
-    
+      <!--結束左邊的標籤-->
+      
+      
     
     <div id="sidebar"><br></br>
+    
+    <!--左邊的框架-->
     
     
      <fb:login-button  id = "login "   scope="public_profile,email" onlogin="checkLoginState();">  
      </fb:login-button>  
 
-<div id="status">  
-</div>  
+	<div id="status">  
+	</div>  
 
 
 
@@ -336,7 +429,34 @@ margin-top:10px;
   data-width="450"
   data-show-faces="true">
 </div>
+
+
+
 </div>
+
+
+<div id="footer">
+	<p>qwef</p>
+
+</div>
+
+
+
+
+<div id="footerdown">
+
+	<br></br>
+	<div id = "final"><h4>關於我們</h4></div>
+	<div id = "final"><h4>合作提案</h4></div>
+	<br></br>
+	<div id = "copyright"><h4>本網站所有內容僅供娛樂使用！</h4></div>
+	<div id = "copyright"><h4>Copyright © 2016 Sneaker. All rights reserved</h4></div>
+
+
+</div>
+
+
+
 
 
 
@@ -348,7 +468,7 @@ var weather= ''
 $(document).ready(function() {
       $('#phase2').hide();
       $('#phase3').hide();
-     
+      $('#phase4').hide();
    });
 
 
@@ -371,7 +491,11 @@ function myFunction() {
     
     
     (); }, 3000);
+    
+	 $('#phase3').show(); 
 }
+
+
 
 /*   facebook sdk */
 
